@@ -1,0 +1,46 @@
+body{
+box-sizing: border-box;
+font-size: 1.1em;
+
+}
+
+
+
+.btn{ 
+background: black;
+color: white;
+}
+
+.btn:hover{
+    background: rgb(240, 111, 111);
+    font-size: 1.2em;
+    color: white;  
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+
+
+
+
+
+
+
+
+  /* MEDIA QUERIES */
+
+  @media screen and (max-width: 650px) {
+    #nav-box { display: flex; flex-flow: column wrap;  align-items: center;}
+    #search-box {display: flex; flex-flow: column wrap;  align-items: center;}
+    #logo { text-align: center;}
+
+  }
+
+  @media screen and (max-width: 450px) {
+    #search-box {display: flex; flex-flow: column wrap;  align-items: center;}
+    #nav-box {display: flex; flex-flow: column wrap;  align-items: center;}
+    #navLinks {display: flex; flex-flow: column wrap;  align-items: center;}
+    #logo { text-align: center;}
+  }
