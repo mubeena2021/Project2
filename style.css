@@ -1,63 +1,97 @@
 * {
-  margin:0;
-  padding: 0;;
   box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  
 }
 
-
 body{
-  background: rgb(61, 74, 97);
-    font-size: 1.1em;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 1.4em;
+   background: rgb(39, 82, 119);
+   font-family: 'Allerta Stencil', sans-serif;
+   font-size: 1.4em;
 }
 
 
 /* Header and Links*/
-#logo, #header{
-font-size: 1.2em;
-color:rgb(255, 255, 253)
+#nav_Container{
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  font-size: 1.2em;
+  color:rgb(255, 255, 255);
+  border-radius: 5px;
+  background: #408072;
+  }
+
+#logo{
+  margin-top: 25px;
+  font-size: 1.2em;
+  color:rgb(255, 255, 255);
+  width: 260px;
+  height: 25px;
+  background: black;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow:  5px 5px 15px rgb(201, 200, 214); 
 }
 
-#logo:hover{
- 
-
+#navLinks{
+  margin-top: 25px;
+  margin-right: 50px;
 }
 
-.nav-link {
- color: white; 
-
+#links {
+  display: flex;
+  flex-flow: row;
+  gap: 17px;
+  border-radius: 5px; 
+  color: white; 
 }
+
+ul { list-style: none;}
+
+a { color: white; text-decoration: none;}
 a:hover{
-  color: black;
-   box-shadow: 3px 2px 11px #383636;
-   background: linear-gradient(to left,rgb(121, 121, 118), rgb(98, 198, 216));  
-
+   color: white;
+   box-shadow: 3px 2px 11px rgb(201, 200, 214);
+   background: linear-gradient(to left,rgb(39, 82, 119), rgb(98, 198, 216)); 
+   border-radius: 5px; 
 }
+
 .btn{ 
     background: black;
     color: white;
+    border-radius: 5px;  
 }
+
 .btn:hover{
-    background: linear-gradient(to left,rgb(121, 121, 118), rgb(98, 198, 216)); 
-    box-shadow: 3px 2px 11px #383636;
-    color: white;  
+    background: linear-gradient(to left,rgb(39, 82, 119), rgb(98, 198, 216)); 
+    box-shadow:  3px 2px 11px rgb(201, 200, 214);
+    color: white; 
 }
+
 .btn:focus {
     outline: none;
     box-shadow: none;
 }
 
-
 /* Number of Gifs*/
 #displayNumber{
+  border-radius: 5px; 
   margin-top: 7px;
- 
+}
+
+#gifs{
+  color: white;
 }
 
 /* Input Box*/
 #search_item{
-  
+  width:85%;
+  margin-right: 7px;
+  border-radius: 5px; 
   outline:none;
   box-shadow: none;
 }
@@ -69,22 +103,21 @@ margin-left: 5px;
 
 /* Grid for Images*/
 #image-box{
-  
-    height: 510px;
+    height: 525px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin: 25px;  
     Display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    row-gap: 15px;
-    column-gap: 1px;
-    box-shadow: 3px 2px 2px 2px #383636;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 27px;
+    column-gap: 11px;
+    box-shadow: 3px 2px 11px #383636;
 }
 
 /* Footer*/
 footer{
-  height: 35px;
-  background: linear-gradient(to left, rgb(43, 42, 42), rgb(155, 153, 153));
+  height: 50px;
+  box-shadow:  5px 5px 15px rgb(201, 200, 214); 
 }
 
 
@@ -92,19 +125,21 @@ footer{
 
   /* MEDIA QUERIES */
 
-  @media screen and (max-width: 650px) {
-    #nav-box { display: flex; flex-flow: column wrap;  align-items: center;}
-    #search-box {display: flex; flex-flow: column wrap;  align-items: center;}
-    #navLinks {display: flex; flex-flow: column wrap;  align-items: center;}
-    #logo { text-align: center;}
+  @media screen and (max-width:800px) {
+    #nav_Container{ display: flex;  flex-flow: column wrap; align-items: center;  }
+    #navLinks{ display: flex; flex-flow: column wrap;  align-items: center;}
+    #search-box {display: flex; flex-flow: column wrap;  align-items: center; }
+    #Links {display: flex; flex-flow: column wrap;  align-items: center; }
     #image-box{grid-template-columns:repeat(1, 1fr);}
+    #gifs{ text-align: center; }
 
   }
 
   @media screen and (max-width: 320px) {
+    #nav_Container{ display: flex;  flex-flow: column wrap; align-items: center;  }
     #search-box {display: flex; flex-flow: column wrap;  align-items: center;}
-    #nav-box {display: flex; flex-flow: column wrap;  align-items: center;}
-    #navLinks {display: flex; flex-flow: column wrap;  align-items: center;}
-    #logo { text-align: center;}
+    #navLinks{display: flex; flex-flow: column wrap;  align-items: center;}
+    #Links {display: flex; flex-flow: column wrap;  align-items: center; }
     #image-box{grid-template-columns:repeat(1, 1fr); }
+    #gifs{ text-align: center; }
   }
