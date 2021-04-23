@@ -1,0 +1,2 @@
+1. As a user I should be able to search for images.
+2. As a user I want to choose the amount of images I can see on the page.
