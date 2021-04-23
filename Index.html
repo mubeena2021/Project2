@@ -9,50 +9,56 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body  id="top">
   
 
 
-<div id ="nav_Container" >
-  <div id="logo"> Giphy<span >SEARCH</span></div>
+<div id ="nav_Container">
+
+  <div id="logo"> Giphy<span id = "span-color">SEARCH</span></div>
   <nav id = "navLinks">
   <ul  id="links">
   <li ><a href=#>Search</a></li>
   <li ><a href=#>Contact</a></li>
   </ul>
   </nav>
-  </div>
+
+</div>
 
 
-<div id="s-Box" class="container-sm border border-dark">
+
+<div id ="searchContainer" class ="container-sm border border-dark border-4 rounded ">
   
-  <div id = "search-box" class= " row align-items-center p-1 m-5 ">    
-    <input type="search" id="search_item" class=" form-control form-control-lg   col-lg-6" placeholder = "Enter Search Here" >  
+  <div id = "search-box" class= " row p-1 m-5 ">   
+
+    <input type="search" id="search_item" class=" form-control form-control-lg col-lg-6" placeholder = "Enter Search Here" >  
     <button type="submit" id="search_btn" class=" btn btn-lg w-auto col-lg-6 ">Search</button> 
           
     <select class="custom-select w-25" id="displayNumber">
-      <option selected></option>
+      <option selected>#</option>
       <option value="5">5</option>
+      <option value="10">10</option>
       <option value="25">25</option>
       <option value="75">75</option>
       <option value="100">100</option>
     </select>
-    <span id = "gifs"># of GIFS</span>
-    
+    <span id = "gifs"># of Gifs</span>
+
   </div>
+
 </div>
 
 
  <!-- Grid holding the GIFS-->
-  <div class="container-sm ">
-    <div id ="image-box" class ="overflow-scroll row row-sm">
+  <div id= "imageContainer" class="container">
+    <div id ="image-box" >
     </div>
   </div>
 
-
+<footer><a href="#top">TOP</a></footer>
+  
 
 <script src="Main.js"></script>
-<footer> here is the footer</footer>
 </body>
 </html>
 

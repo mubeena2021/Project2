@@ -17,24 +17,28 @@ body{
   display: flex;
   flex-flow: row;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 3px;
   justify-content: space-between;
   font-size: 1.2em;
   color:rgb(255, 255, 255);
   border-radius: 5px;
-  background: #408072;
+  box-shadow:  1px 1px 15px rgb(8, 8, 8); 
   }
 
 #logo{
   margin-top: 25px;
+  margin-left: 3px;
   font-size: 1.2em;
   color:rgb(255, 255, 255);
   width: 260px;
   height: 25px;
-  background: black;
+  background: rgb(39, 39, 39);
   text-align: center;
   border-radius: 5px;
-  box-shadow:  5px 5px 15px rgb(201, 200, 214); 
+  box-shadow: 5px 5px 35px rgb(201, 200, 214); 
+}
+#span-color{
+  color: rgb(98, 198, 216);
 }
 
 #navLinks{
@@ -53,28 +57,30 @@ body{
 ul { list-style: none;}
 
 a { color: white; text-decoration: none;}
+
 a:hover{
    color: white;
-   box-shadow: 3px 2px 11px rgb(201, 200, 214);
+   padding: 7px;
+   box-shadow: 3px 2px 5px rgb(201, 200, 214);
    background: linear-gradient(to left,rgb(39, 82, 119), rgb(98, 198, 216)); 
    border-radius: 5px; 
 }
 
 .btn{ 
-    background: black;
+  background: rgb(39, 39, 39);
     color: white;
     border-radius: 5px;  
 }
 
 .btn:hover{
     background: linear-gradient(to left,rgb(39, 82, 119), rgb(98, 198, 216)); 
-    box-shadow:  3px 2px 11px rgb(201, 200, 214);
+    box-shadow:  3px 2px 5px rgb(201, 200, 214);
     color: white; 
 }
 
 .btn:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
 /* Number of Gifs*/
@@ -87,6 +93,12 @@ a:hover{
   color: white;
 }
 
+/* Container for Input and Button*/
+#searchContainer{
+ margin: 50px auto;
+}
+
+
 /* Input Box*/
 #search_item{
   width:85%;
@@ -98,28 +110,37 @@ a:hover{
 
 /* Input Button*/
 #search_btn{
+align-items:center;
 margin-left: 5px;
+}
+
+
+/*Image Container*/
+#imageContainer{
+margin: 1px auto;
 }
 
 /* Grid for Images*/
 #image-box{
-    height: 525px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: 25px;  
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 5px;  
     Display: grid;
     grid-template-columns: repeat(5, 1fr);
     row-gap: 27px;
-    column-gap: 11px;
-    box-shadow: 3px 2px 11px #383636;
+    column-gap: 11px; 
 }
 
 /* Footer*/
 footer{
-  height: 50px;
-  box-shadow:  5px 5px 15px rgb(201, 200, 214); 
+margin-right: 15px;
+margin-bottom: 15px;
+position:fixed;
+bottom: 0;
+right:0;
+text-align:center;
+  
 }
-
 
 
 
@@ -132,7 +153,6 @@ footer{
     #Links {display: flex; flex-flow: column wrap;  align-items: center; }
     #image-box{grid-template-columns:repeat(1, 1fr);}
     #gifs{ text-align: center; }
-
   }
 
   @media screen and (max-width: 320px) {
